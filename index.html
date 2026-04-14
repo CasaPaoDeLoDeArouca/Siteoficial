@@ -19,16 +19,19 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
+            
+           font-family: 'Montserrat', sans-serif;
             margin: 0;
             color: var(--texto);
+            /* OTIMIZAÇÃO DO FUNDO: background-color ajuda se a imagem demorar a carregar */
+            background-color: var(--azul-escuro);
             background-image: url('1000013102.jpg');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             line-height: 1.8;
             scroll-behavior: smooth;
-        }
 
         header { 
             padding: 40px 20px; 
@@ -166,7 +169,7 @@
 <body>
 
 <header>
-    <img src="Foto de Cecília.jpg" alt="Logo Alberto Teixeira Pinto & Filhos" class="main-logo">
+    <img src="fotodececília.jpg" alt="Logo Alberto Teixeira Pinto & Filhos" class="main-logo">
 </header>
 
 <nav>
