@@ -36,17 +36,23 @@
         header { 
     padding: 30px 20px; 
     text-align: center; 
-    background-color: #002d62; /* Azul Escuro Profissional */
+    background-color: #002d62; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .main-logo { 
-    max-width: 300px; /* Tamanho ideal para telemóvel e PC */
-    height: auto;
+    width: 200px;        /* Largura do círculo */
+    height: 200px;       /* Altura do círculo */
+    object-fit: cover;   /* Centra a foto dentro do círculo */
+    border-radius: 50%;  /* Faz o efeito redondo */
     display: block;
     margin: 0 auto;
+    
+    /* EFEITO PARA FUNDIR NO AZUL (Tirar o fundo branco) */
+    mix-blend-mode: multiply; 
+    filter: brightness(1.1) contrast(1.1);
 }
-
+            
 
         nav {
             position: sticky;
