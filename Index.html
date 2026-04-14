@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa do Pão de Ló de Arouca | Alberto Teixeira Pinto & Filhos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --azul-premium: #002d62;
+            --azul-claro: #f4f8fb;
+            --dourado: #c5a059;
+            --branco: #ffffff;
+            --texto: #333333;
+            --transicao: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            color: var(--texto);
+            background-color: var(--branco);
+            line-height: 1.8;
+        }
+
+        header { padding: 30px 20px; text-align: center; background: var(--branco); }
+        .main-logo { max-width: 380px; height: auto; }
+
+        nav {
+            background: rgba(0, 45, 98, 0.98);
+            backdrop-filter: blur(8px);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: var(--branco);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            transition: var(--transicao);
+        }
+        nav a:hover { color: var(--dourado); }
+
+        section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { color: var(--azul-premium); font-size: 2.5rem; margin-bottom: 10px; }
+        .divider { width: 60px; height: 4px; background: var(--dourado); margin: 0 auto; }
+
+        /* Estilo da História Expandida */
+        .historia-box {
+            background: var(--azul-claro);
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .historia-box h3 { color: var(--azul-premium); font-size: 1.8rem; margin-top: 0; }
+        .curiosidade {
+            background: var(--branco);
+            padding: 25px;
+            border-left: 5px solid var(--dourado);
+            margin: 30px 0;
+            font-style: italic;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .produtos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card-produto {
+            background: var(--branco);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transicao);
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-produto:hover { transform: translateY(-10px); }
+        .img-wrapper { height: 250px; overflow: hidden; }
+        .card-produto img { width: 100%; height: 100%; object-fit: cover; }
+        .info-produto { padding: 25px; flex-grow: 1; }
+        .info-produto h3 { color: var(--azul-premium); margin-bottom: 12px; }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .contact-card {
+            background: var(--azul-premium);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .contact-card i { font-size: 2rem; color: var(--dourado); margin-bottom: 15px; }
+
+        footer { background: #111; color: #777; padding: 40px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="Foto de Cecília.jpg" alt="Alberto Teixeira Pinto & Filhos" class="main-logo">
+</header>
+
+<nav>
+    <a href="#historia">O Legado</a>
+    <a href="#produtos">Especialidades</a>
+    <a href="#contactos">Contactos</a>
+</nav>
+
+<section id="historia">
+    <div class="section-title">
+        <h2>Um Século e Meio de Arte e Devoção</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="historia-box">
+        <div class="historia-text">
+            <h3>As Raízes da casa do Pão de ló</h3>
+            <p>O <strong>Pão de Ló de Arouca</strong> não nasceu apenas de uma receita, mas de um legado. Após a extinção das ordens religiosas em 1834, o segredo da doçaria que deliciava as freiras cistercienses do <strong>Mosteiro da rainha Santa Mafalda de Arouca</strong> passou para as mãos de famílias locais dedicadas. Em 1840, a família Teixeira Pinto assumiu esta missão, transformando a arte sacra em património público.</p>
+            
+            <div class="curiosidade">
+                "Diz a história que este doce era o presente de eleição para os doutores e juízes que visitavam a vila, sendo sempre servido em pratos de louça fina, acompanhado pela hospitalidade que só o Burgo sabe oferecer."
+            </div>
+
+            <h3>Alberto Teixeira Pinto: O Mestre da Tradição</h3>
+            <p>Foi sob a visão de <strong>Alberto Teixeira Pinto</strong> que a casa consolidou o seu prestígio. Ao manter o uso rigoroso do **forno a lenha** e ao aperfeiçoar o "ponto" da calda de açúcar, Alberto garantiu que o nome da família fosse sinónimo de autenticidade. Hoje, os seus filhos e netos mantêm a chama acesa, produzindo as fatias que são, para muitos, o melhor pão de ló de Portugal.</p>
+            
+            <p>A localização no <strong>Burgo</strong> não é por acaso: é o coração histórico da freguesia, onde o tempo parece correr mais devagar para que o pão de ló possa repousar e absorver a calda de açúcar no tempo certo.</p>
+        </div>
+    </div>
+</section>
+
+<section id="produtos" style="background-color: #fdfdfd;">
+    <div class="section-title">
+        <h2>A Nossa Seleção Nobre</h2>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="produtos-container">
+        <div class="card-produto">
+            <div class="img-wrapper"><img src="1776025581006_1000013047.jpg" alt="Pão de Ló de Fatias"></div>
+            <div class="info-produto">
+                <h3>Pão de Ló de Fatias</h3>
+                <p>O ex-libris. Batido durante mais de uma hora, é a sua cozedura lentamente que leva quase duas horas. O segredo final é o banho manual com **açúcar em ponto**, que sela a humidade e cria a crosta rendilhada que o tornou mundialmente famoso.</p>
+            </div>
+        </div>
+
+        <div class="card-produto">
+            <div class="img-wrapper"><img src="1000013048.jpg" alt="Morcela Doce de Arouca"></div>
+            <div class="info-produto">
+                <h3>Morcela Doce</h3>
+                <p>Um tesouro da doçaria de amêndoa. Esta iguaria conventual substitui o salgado pela riqueza da **amêndoa moída, açúcar e pão**, cozida lentamente até atingir uma consistência sedosa e um sabor que evoca os antigos banquetes monásticos.</p>
+            </div>
+        </div>
+
+        <div class="card-produto">
+            <div class="img-wrapper"><img src="1000013054.jpg" alt="Cavacas de Arouca"></div>
+            <div class="info-produto">
+                <h3>Cavacas</h3>
+                <p>A leveza absoluta. A massa aerada é mergulhada num **açúcar em ponto de seda**, resultando num exterior branco e firme que esconde um coração que se desfaz no paladar.</p>
+            </div>
+        </div>
+
+        <div class="card-produto">
+            <div class="img-wrapper"><img src="1000013051.jpg" alt="Melindres"></div>
+            <div class="info-produto">
+                <h3>Melindres</h3>
+                <p>O biscoito da hospitalidade arouquense. Pequenos pedaços de história feitos com ovos e açúcar, mantendo a receita intocada desde o século XIX.</p>
+            </div>
+        </div>
+
+        <div class="card-produto">
+            <div class="img-wrapper"><img src="1000013050.jpg" alt="Pão de Ló de Bola"></div>
+            <div class="info-produto">
+                <h3>Pão de Ló de "Bola"</h3>
+                <p>A simplicidade majestosa. Cozido à moda antiga no forno a lenha, preserva a textura de "nuvem" que o tornou a base de toda a nossa tradição familiar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contactos">
+    <div class="section-title">
+        <h2>Contactos & Localização</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="contact-grid">
+        <div class="contact-card">
+            <i class="fas fa-phone-alt"></i>
+            <h4>Telefone</h4>
+            <p><a href="tel:256944115" style="color: white; text-decoration: none;">256 944 115</a></p>
+        </div>
+        <div class="contact-card">
+            <i class="fab fa-facebook-f"></i>
+            <h4>Facebook</h4>
+            <p><a href="https://www.facebook.com/CasadoPaodeLodeArouca/" target="_blank" style="color: white; text-decoration: none;">Visite a nossa Página</a></p>
+        </div>
+        <div class="contact-card" style="background: var(--dourado);">
+            <i class="fas fa-map-marker-alt" style="color: white;"></i>
+            <h4 style="color: white;">Cimo de Burgo</h4>
+            <p style="color: white; font-size: 0.9rem;">4540-204 Burgo, Arouca. Venha sentir o aroma da tradição.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p><strong>Alberto Teixeira Pinto & Filhos</strong></p>
+    <p>Doce Regional de Arouca • Marca Registada • Desde 1840</p>
+</footer>
+
+</body>
+</html>
