@@ -4,257 +4,308 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa do Pão de Ló de Arouca | Alberto Teixeira Pinto & Filhos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --azul-premium: #002d62;
-            --azul-claro: #f4f8fb;
+            --azul-escuro: #002d62;   
+            --azul-safira: #1e4f8a;   
+            --azul-suave: #4a7ab5;     
             --dourado: #c5a059;
             --branco: #ffffff;
             --texto: #333333;
-            --shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        /* Garantir que o scroll não fica "tapado" pelo cabeçalho fixo */
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 220px; /* Ajusta o foco para não parar atrás do menu */
+            --transicao: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             color: var(--texto);
-            background-color: var(--branco);
+            background-image: url('1000013102.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
             line-height: 1.8;
+            scroll-behavior: smooth;
         }
 
-        /* CABEÇALHO FIXO (STICKY) */
-        header {
-            background-color: var(--azul-premium);
-            padding: 20px 0;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: sticky; /* Torna o cabeçalho fixo */
-            top: 0;
+        header { 
+            padding: 40px 20px; 
+            text-align: center; 
+            background: var(--azul-escuro);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        .main-logo { max-width: 340px; height: auto; filter: brightness(0) invert(1); }
+
+        nav {
+            position: sticky;
+            top: 25px;
             z-index: 1000;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            margin: 30px 0;
         }
-
-        .symbol-frame {
-            width: 120px; /* Reduzi um pouco para não ocupar a tela toda ao ser fixo */
-            height: 120px;
-            background-color: var(--branco);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            border: 3px solid var(--branco);
-            margin-bottom: 15px;
-            transition: 0.3s;
+        .nav-container {
+            display: inline-block;
+            background: rgba(30, 79, 138, 0.98); 
+            padding: 12px 45px;
+            border-radius: 50px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            border: 1px solid var(--dourado);
         }
-
-        .symbol-img {
-            max-width: 85%;
-            height: auto;
-            object-fit: contain;
-        }
-
-        header nav {
-            display: flex;
-            gap: 25px;
-            justify-content: center;
-        }
-
-        header nav a {
+        nav a {
             color: var(--branco);
             text-decoration: none;
+            margin: 0 20px;
             font-weight: 600;
             text-transform: uppercase;
             font-size: 0.8rem;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            transition: var(--transicao);
         }
+        nav a:hover { color: var(--dourado); }
 
-        header nav a:hover { color: var(--dourado); }
-
-        /* SECÇÕES */
-        section {
-            padding: 60px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
+        .hero-banner {
+            background: var(--azul-suave);
+            padding: 65px 20px;
+            text-align: center;
+            margin: 50px auto;
+            max-width: 950px;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            color: white;
         }
-
-        .section-title { text-align: center; margin-bottom: 40px; }
-        .section-title h2 { font-family: 'Crimson Pro', serif; color: var(--azul-premium); font-size: 2.5rem; margin: 0; }
-        .divider { width: 50px; height: 3px; background: var(--dourado); margin: 15px auto; }
-
-        /* HISTÓRIA */
-        .historia-box {
-            background: var(--azul-claro);
-            padding: 40px;
-            border-radius: 20px;
-            border-left: 8px solid var(--azul-premium);
-            box-shadow: var(--shadow);
-        }
-
-        .quote-box {
-            border-left: 5px solid var(--dourado);
-            padding: 20px;
-            margin: 30px 0;
-            background: var(--branco);
+        .hero-banner h1 { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 3.8rem; 
+            margin: 0;
             font-style: italic;
-            border-radius: 0 10px 10px 0;
-            font-family: 'Crimson Pro', serif;
         }
+
+        section { 
+            padding: 90px 50px; 
+            max-width: 1100px; 
+            margin: 60px auto; 
+            background: rgba(255, 255, 255, 0.98); 
+            backdrop-filter: blur(15px);
+            border-radius: 40px; 
+            box-shadow: 0 30px 70px rgba(0,0,0,0.2);
+        }
+
+        .section-title h2 { 
+            font-family: 'Cormorant Garamond', serif; 
+            color: var(--azul-escuro); 
+            font-size: 3.2rem; 
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .divider { width: 75px; height: 3px; background: var(--dourado); margin: 0 auto 50px; }
 
         /* PRODUTOS */
         .produtos-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
         }
-
         .card-produto {
             background: var(--branco);
-            border-radius: 15px;
+            border-radius: 25px;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            border: 1px solid #eee;
+            transition: var(--transicao);
+            border: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
         }
+        .card-produto:hover { transform: translateY(-12px); box-shadow: 0 20px 45px rgba(0,0,0,0.12); }
+        .img-wrapper { height: 280px; overflow: hidden; }
+        .card-produto img { width: 100%; height: 100%; object-fit: cover; transition: 1.5s ease; }
+        .info-produto { padding: 35px; flex-grow: 1; }
+        .info-produto h3 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--azul-escuro); margin-bottom: 12px; }
+        .tag-detalhe { color: var(--dourado); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.2px; display: block; margin-bottom: 8px; }
 
-        .img-wrapper { height: 250px; overflow: hidden; }
-        .img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-
-        .info-produto { padding: 25px; }
-        .info-produto h3 { font-family: 'Crimson Pro', serif; color: var(--azul-premium); margin: 0 0 10px 0; }
+        /* TESTEMUNHOS */
+        .testemunhos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .testemunho-card {
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            border-top: 5px solid var(--azul-safira);
+            transition: var(--transicao);
+        }
+        .testemunho-card i { color: var(--dourado); font-size: 1.8rem; margin-bottom: 20px; display: block; }
+        .testemunho-card p { font-style: italic; color: #444; font-size: 1.05rem; margin-bottom: 20px; }
+        .testemunho-card strong { color: var(--azul-escuro); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
 
         /* CONTACTOS */
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
         }
-
         .contact-card {
-            background: var(--azul-premium);
-            color: var(--branco);
-            padding: 30px;
-            border-radius: 15px;
+            background: var(--azul-escuro);
+            color: white;
+            padding: 45px 30px;
+            border-radius: 30px;
             text-align: center;
+            text-decoration: none;
+            transition: var(--transicao);
         }
+        .contact-card:hover { background: var(--azul-safira); transform: scale(1.05); }
+        .contact-card i { font-size: 2.5rem; margin-bottom: 20px; display: block; color: var(--dourado); }
+        .contact-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; margin-bottom: 8px; }
 
-        .contact-card i { font-size: 2rem; color: var(--dourado); margin-bottom: 15px; }
-        .contact-card a { color: var(--branco); text-decoration: none; display: block; }
-
-        footer {
-            background: #111;
-            color: #777;
-            padding: 40px;
-            text-align: center;
-            font-size: 0.85rem;
-        }
-
-        /* MOBILE */
-        @media (max-width: 768px) {
-            .symbol-frame { width: 90px; height: 90px; }
-            html { scroll-padding-top: 180px; }
-        }
+        footer { background: var(--azul-escuro); color: rgba(255,255,255,0.7); padding: 80px 20px; text-align: center; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="symbol-frame">
-        <img src="Foto de Cecília.jpg" alt="Logótipo Alberto Teixeira Pinto" class="symbol-img">
-    </div>
-    <nav>
+    <img src="Foto de Cecília.jpg" alt="Logo Alberto Teixeira Pinto & Filhos" class="main-logo">
+</header>
+
+<nav>
+    <div class="nav-container">
         <a href="#historia">O Legado</a>
         <a href="#produtos">Especialidades</a>
+        <a href="#testemunhos">Testemunhos</a>
         <a href="#contactos">Contactos</a>
-    </nav>
-</header>
+    </div>
+</nav>
+
+<div class="hero-banner">
+    <h1>Tradição & Nobreza</h1>
+    <p style="letter-spacing: 4px; text-transform: uppercase; margin-top: 15px; font-weight: 400;">Arouca • Desde 1840</p>
+</div>
 
 <section id="historia">
     <div class="section-title">
-        <h2>Um Século e Meio de Arte e Devoção</h2>
+        <h2>A Nossa História</h2>
         <div class="divider"></div>
     </div>
-    <div class="historia-box">
-        <h3>As Raízes da Casa do Pão de Ló</h3>
-        <p>O <strong>Pão de Ló de Arouca</strong> nasceu de um legado secular. Após 1834, o segredo da doçaria das freiras cistercienses do <strong>Mosteiro da Rainha Santa Mafalda</strong> foi preservado por famílias locais. Em 1840, a família Teixeira Pinto assumiu esta nobre missão.</p>
-        
-        <div class="quote-box">
-            "Diz a história que este doce era o presente de eleição para os doutores e juízes que visitavam a vila, acompanhado pela hospitalidade única do Burgo."
-        </div>
-
-        <p>Sob a visão de <strong>Alberto Teixeira Pinto</strong>, a casa manteve o rigor do forno a lenha e a perfeição da calda de açúcar, tornando-se um símbolo de autenticidade em Arouca.</p>
+    <div style="max-width: 900px; margin: 0 auto; text-align: center; font-size: 1.15rem; color: #444;">
+        <p>A <strong>Casa do Pão de Ló de Arouca</strong> de <strong>Alberto Teixeira Pinto & Filhos</strong> é a guardiã de um segredo com quase dois séculos. Originária do Mosteiro de Arouca, a nossa receita sobreviveu à história, mantendo-se fiel aos métodos de 1840.</p>
+        <p>O <strong>batido manual enérgico</strong> e a cozedura em <strong>forno a lenha</strong> conferem aos nossos doces uma alma impossível de replicar industrialmente. Esta dedicação artesanal garante a textura única que define a identidade gastronómica da nossa vila.</p>
+        <p>Hoje, continuamos a honrar o legado da família, assegurando que cada produto transporta consigo a mestria artesanal e a nobreza do sabor original.</p>
     </div>
 </section>
 
-<section id="produtos" style="background-color: var(--azul-claro);">
+<section id="produtos">
     <div class="section-title">
-        <h2>A Autenticidade em Cada Detalhe</h2>
+        <h2>As Especialidades</h2>
         <div class="divider"></div>
     </div>
     <div class="produtos-container">
         <div class="card-produto">
-            <div class="img-wrapper"><img src="pao-de-lo.jpg" alt="Pão de Ló"></div>
+            <div class="img-wrapper"><img src="1776025581006_1000013047.jpg" alt="Fatias Húmidas"></div>
             <div class="info-produto">
-                <h3>Pão de Ló (Fatias)</h3>
-                <p>O ex-libris da casa. Envolvido numa calda de açúcar que cria uma crosta húmida e cristalizada.</p>
+                <span class="tag-detalhe">Ex-Libris de Arouca</span>
+                <h3>Fatias de Pão de Ló Húmido</h3>
+                <p>Ouro em forma de doce. Fatias generosas banhadas em calda de açúcar com um interior cremoso e húmido. Uma experiência inesquecível.</p>
             </div>
         </div>
+
+        <div class="card-produto">
+            <div class="img-wrapper"><img src="1000013050.jpg" alt="Pão de Ló Meio Seco"></div>
+            <div class="info-produto">
+                <span class="tag-detalhe">0.5kg | 1kg | Encomendas Maiores</span>
+                <h3>Broa de Pão de Ló</h3>
+                <p>O formato clássico "meio seco" cozido à moda antiga. Disponível em tamanhos padrão ou por encomenda personalizada para festas e eventos.</p>
+            </div>
+        </div>
+
         <div class="card-produto">
             <div class="img-wrapper"><img src="1000013048.jpg" alt="Morcela Doce"></div>
             <div class="info-produto">
+                <span class="tag-detalhe">Herança Conventual</span>
                 <h3>Morcela Doce</h3>
-                <p>Rica mistura de **amêndoa, pão, açúcar e gemas**, cozida com mestria artesanal.</p>
+                <p>Uma fusão nobre de amêndoa, pão, manteiga, açúcar e canela. Receita secular vinda diretamente das freiras cistercienses do Mosteiro de Arouca.</p>
             </div>
         </div>
+
         <div class="card-produto">
-            <div class="img-wrapper"><img src="1000013054.jpg" alt="Cavacas"></div>
+            <div class="img-wrapper"><img src="1000013054.jpg" alt="Cavacas de Arouca"></div>
             <div class="info-produto">
-                <h3>Cavacas</h3>
-                <p>Leves e estaladiças, **cobertas com açúcar no ponto** para uma textura firme e secular.</p>
+                <span class="tag-detalhe">Leveza Artesanal</span>
+                <h3>Cavacas de Arouca</h3>
+                <p>Interior leve e poroso com uma cobertura crocante de açúcar. Um clássico da nossa doçaria regional feito com rigor e tradição.</p>
             </div>
+        </div>
+
+        <div class="card-produto">
+            <div class="img-wrapper"><img src="1000013051.jpg" alt="Melindres de Arouca"></div>
+            <div class="info-produto">
+                <span class="tag-detalhe">Delicadeza Tradicional</span>
+                <h3>Melindres</h3>
+                <p>Pequenos suaves e delicados bolinhos de ovo. O acompanhamento perfeito para um momento de pausa com o sabor autêntico de antigamente.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testemunhos">
+    <div class="section-title">
+        <h2>Testemunhos</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="testemunhos-grid">
+        <div class="testemunho-card">
+            <i class="fas fa-quote-left"></i>
+            <p>"O Pão de Ló húmido é uma experiência religiosa. Não há igual em todo o país, a calda de açúcar é perfeita!"</p>
+            <strong>— Avaliação Google</strong>
+        </div>
+        <div class="testemunho-card">
+            <i class="fas fa-quote-left"></i>
+            <p>"Entrar aqui é viajar no tempo. O aroma do forno a lenha e a simpatia da família completam o sabor divinal."</p>
+            <strong>— Visit Arouca</strong>
+        </div>
+        <div class="testemunho-card">
+            <i class="fas fa-quote-left"></i>
+            <p>"Qualidade constante há décadas. É paragem obrigatória sempre que visito o Geopark Arouca."</p>
+            <strong>— Cliente Frequente</strong>
         </div>
     </div>
 </section>
 
 <section id="contactos">
     <div class="section-title">
-        <h2>Encomendas & Localização</h2>
+        <h2>Contactos & Reservas</h2>
         <div class="divider"></div>
     </div>
     <div class="contact-grid">
-        <div class="contact-card">
+        <a href="tel:256944115" class="contact-card">
             <i class="fas fa-phone-alt"></i>
             <h4>Telefone</h4>
-            <a href="tel:256944115">256 944 115</a>
-        </div>
-        <div class="contact-card">
+            <p>256 944 115</p>
+        </a>
+        <a href="mailto:geral@casadopaodeloarouca.com" class="contact-card">
             <i class="fas fa-envelope"></i>
-            <h4>E-mail</h4>
-            <a href="mailto:alberto.teixeira.pinto@gmail.com">alberto.teixeira.pinto@gmail.com</a>
-        </div>
-        <div class="contact-card">
+            <h4>Email</h4>
+            <p>geral@casadopaodeloarouca.com</p>
+        </a>
+        <a href="https://www.facebook.com/CasadoPaodeLodeArouca/" target="_blank" class="contact-card">
+            <i class="fab fa-facebook-f"></i>
+            <h4>Facebook</h4>
+            <p>Acompanhe a Nossa Casa</p>
+        </a>
+        <a href="https://maps.app.goo.gl/YourMapLink" target="_blank" class="contact-card" style="border: 2px solid var(--dourado);">
             <i class="fas fa-map-marker-alt"></i>
             <h4>Localização</h4>
-            <p>Cimo de Burgo, Arouca</p>
-        </div>
+            <p>Burgo, Arouca<br><strong>Abrir no Mapa</strong></p>
+        </a>
     </div>
 </section>
 
 <footer>
-    <p><strong>Alberto Teixeira Pinto & Filhos</strong></p>
-    <p>Património Gastronómico de Arouca • Desde 1840</p>
+    <div style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin-bottom: 15px;">Alberto Teixeira Pinto & Filhos</div>
+    <p>Doce Regional de Arouca • Marca Registada • Desde 1840</p>
+    <p style="margin-top: 25px; font-size: 0.8rem; opacity: 0.6;">© 2024 Casa do Pão de Ló de Arouca. Todos os direitos reservados.</p>
 </footer>
 
-</body>
-</html>
 </body>
 </html>
