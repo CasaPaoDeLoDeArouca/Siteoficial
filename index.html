@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa do Pão de Ló de Arouca | Alberto Teixeira Pinto & Filhos</title>
+    
+    <title>Pão de Ló de Arouca | Alberto Teixeira Pinto & Filhos | Desde 1840</title>
+    <meta name="description" content="O autêntico Pão de Ló de Arouca de Alberto Teixeira Pinto & Filhos. Tradição conventual desde 1840, batido à mão e cozido em forno a lenha.">
+    <meta name="keywords" content="Pão de Ló de Arouca, Doces Conventuais Arouca, Morcela Doce, Cavacas de Arouca, Melindres, Alberto Teixeira Pinto, Doçaria Tradicional, Onde comprar Pão de Ló Arouca, Visitar Arouca">
+    <meta name="author" content="Alberto Teixeira Pinto & Filhos">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     
@@ -19,39 +24,41 @@
         }
 
         body {
-            
-           font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             color: var(--texto);
-            /* OTIMIZAÇÃO DO FUNDO: background-color ajuda se a imagem demorar a carregar */
             background-color: var(--azul-escuro);
+            /* IMAGEM DE FUNDO DO SITE (Verifica se o nome está correto no GitHub) */
             background-image: url('1000013102.jpg');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
             line-height: 1.8;
             scroll-behavior: smooth;
+        }
 
+        /* CABEÇALHO COM LOGO TOTALMENTE BRANCO E REDONDO */
         header { 
-    padding: 30px 20px; 
-    text-align: center; 
-    background-color: #002d62; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
+            padding: 60px 20px; 
+            text-align: center; 
+            background: var(--azul-escuro);
+            box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+        }
 
-.main-logo { 
-    width: 200px;        /* Largura do círculo */
-    height: 200px;       /* Altura do círculo */
-    object-fit: cover;   /* Centra a foto dentro do círculo */
-    border-radius: 50%;  /* Faz o efeito redondo */
-    display: block;
-    margin: 0 auto;
-    
-    /* EFEITO PARA FUNDIR NO AZUL (Tirar o fundo branco) */
-    mix-blend-mode: multiply; 
-    filter: brightness(1.1) contrast(1.1);
-}
+        .main-logo { 
+            width: 380px;  /* Tamanho ligeiramente aumentado */
+            height: 380px; 
+            object-fit: cover; 
+            border-radius: 50%; 
+            display: block;
+            margin: 0 auto;
+            
+            /* FILTRO PARA TORNAR A IMAGEM TOTALMENTE BRANCA (Branco Puro) */
+            filter: brightness(0) invert(1);
+            
+            /* Removemos a opacidade para ser um branco forte */
+            opacity: 1;
+        }
             
 
         nav {
