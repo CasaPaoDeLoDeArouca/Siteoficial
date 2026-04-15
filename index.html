@@ -47,22 +47,19 @@
         }
 
         .main-logo { 
-            /* Tamanho aumentado para o logo redondo */
-            width: 380px;  
-            height: 380px; 
-            
-            /* CRUCIAL PARA APARECER REDONDO SEM DISTORCER A FOTO */
-            object-fit: cover; /* Recorta e centra a foto dentro do círculo */
-            border-radius: 50%; /* Faz o corte redondo */
-            
-            display: block;
-            margin: 0 auto;
-            
-            /* FILTRO PARA TORNAR A IMAGEM TOTALMENTE BRANCA (Branco Puro) */
-            filter: brightness(0) invert(1);
-            
-            /* Removemos a opacidade para ser um branco forte */
-            opacity: 1;
+    width: 380px;  
+    height: 380px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    display: block;
+    margin: 0 auto;
+    
+    /* REMOVA o filtro de inverter cores se a imagem sumir */
+    filter: none; 
+    
+    /* Adicione uma borda dourada para dar o ar de nobreza */
+    border: 4px solid var(--dourado);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
         nav {
             position: sticky;
